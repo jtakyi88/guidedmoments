@@ -1,0 +1,441 @@
+/* 
+  Guided Moments - Premium Design System
+  Concept: Jony Ive Minimalism + Rory Sutherland Behavioral Choice Architecture
+  Aesthetics: Ethereal, Calming, High-Ticket Wellness
+*/
+
+:root {
+  /* Color Palette */
+  --color-bg: #FDFAF5; /* Extremely soft cream */
+  --color-surface: #FFFFFF;
+  --color-text-main: #2A3631; /* Deep forest green / charcoal */
+  --color-text-muted: #6A7A71;
+  --color-accent: #8E9F8E; /* Muted sage green */
+  --color-gold: #C0A87B; /* Muted luxury gold */
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Sizing & Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  
+  /* Transitions */
+  --ease-smooth: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  --border-radius: 2px;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, .logo {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--ease-smooth);
+}
+
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Layout Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-label {
+  display: block;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-text {
+  max-width: 650px;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--color-text-main);
+  color: var(--color-bg);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: var(--border-radius);
+  transition: all var(--ease-smooth);
+  border: 1px solid var(--color-text-main);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-text-main);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 100;
+  transition: background-color var(--ease-smooth), padding var(--ease-smooth);
+}
+
+.navbar.scrolled {
+  background-color: rgba(253, 250, 245, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-logo-text {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-text-main);
+  transition: width var(--ease-smooth);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.cta-outline {
+  border: 1px solid var(--color-text-main);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+}
+.cta-outline::after { display: none; }
+.cta-outline:hover {
+  background-color: var(--color-text-main);
+  color: var(--color-bg);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* A soft gradient overlay to ensure text readability without ruining the image */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(253, 250, 245, 1) 0%, rgba(253, 250, 245, 0.2) 60%, rgba(253, 250, 245, 0) 100%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  padding: var(--spacing-md);
+  margin-top: 10vh;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-main);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-muted);
+}
+
+/* Philosophy Section */
+.philosophy-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.founder-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.founder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Offerings Grid */
+.offerings-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.offering-card {
+  background: var(--color-surface);
+  padding: var(--spacing-lg) var(--spacing-md);
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: transform var(--ease-smooth), box-shadow var(--ease-smooth);
+}
+
+.offering-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+}
+
+.card-icon {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-sm);
+  opacity: 0.7;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-link {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
+.card-link:hover {
+  color: var(--color-gold);
+}
+
+/* Voice & Ear Section */
+.voice-ear {
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl) 0;
+}
+
+/* Footer / CTA */
+.footer {
+  padding: var(--spacing-xl) 0 0 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-text {
+  margin-bottom: var(--spacing-lg);
+}
+
+.minimal-form {
+  display: flex;
+  max-width: 450px;
+  border-bottom: 1px solid var(--color-text-main);
+  padding-bottom: 0.5rem;
+}
+
+.form-input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  outline: none;
+  color: var(--color-text-main);
+}
+
+.form-input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.btn-submit {
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-main);
+  cursor: pointer;
+  font-weight: 500;
+  transition: color var(--ease-smooth);
+}
+
+.btn-submit:hover {
+  color: var(--color-gold);
+}
+
+.footer-col h4 {
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  color: var(--color-gold);
+}
+
+.footer-col a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: var(--spacing-md);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .philosophy-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guided Moments offers personalized life coaching, wellness circles, reiki, and walk & talk sessions. Begin your purposeful living journey today.">
+    <title>Guided Moments | Purposeful Living</title>
+    <!-- Premium Google Fonts: Playfair Display for Serifs (Authority/Elegance) & Inter for crisp readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- GSAP for smooth micro-animations -> Jony Ive aesthetic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Minimalist Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="Guided Moments Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Guided Moments</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">Philosophy</a>
+                <a href="#offerings" class="nav-link">Offerings</a>
+                <a href="#connect" class="nav-link cta-outline">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- The Hook: Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">Purposeful living begins with a single, guided moment.</h1>
+            <p class="hero-subtitle">Elevate your self-awareness, positive transformation, and personal growth.</p>
+            <a href="#offerings" class="btn-primary">Begin the Journey</a>
+        </div>
+    </section>
+
+    <!-- The Authority: Philosophy / About Section -->
+    <section class="section philosophy" id="about">
+        <div class="container philosophy-container">
+            <div class="philosophy-text fade-in-scroll">
+                <span class="section-label">Our Philosophy</span>
+                <h2 class="section-title">A safe space for profound transformation.</h2>
+                <p class="section-text">Our mission is to provide personalized coaching and consulting services that support our clients to unlock their full potential, discover their passions, and design a life that aligns with their values.</p>
+                <p class="section-text">We strive to cultivate self-awareness and personal growth in every dimension of your wellness journey. It's time to design a life plan that propels you forward.</p>
+            </div>
+            <div class="philosophy-image fade-in-scroll">
+                <div class="founder-image-wrapper">
+                    <img src="assets/images/zee_mitchel.png" alt="Zee Mitchel - Founder" class="founder-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Offerings: Service Cards -->
+    <section class="section offerings" id="offerings">
+        <div class="container">
+            <div class="offerings-header fade-in-scroll">
+                <span class="section-label">Your Path</span>
+                <h2 class="section-title text-center">Curated Offerings</h2>
+                <p class="section-text text-center mx-auto">Explore our dedicated pathways designed to nurture your mind, body, and spirit.</p>
+            </div>
+            
+            <div class="offerings-grid">
+                <!-- Card 1 -->
+                <div class="offering-card fade-in-scroll">
+                    <div class="card-icon">1</div>
+                    <h3 class="card-title">1-on-1 Life Coaching</h3>
+                    <p class="card-text">Tailored sessions focused on empowering you to develop a positive mindset, build self-confidence, and improve overall well-being in a judgment-free space.</p>
+                    <a href="#connect" class="card-link">Request a Session &rarr;</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="offering-card fade-in-scroll">
+                    <div class="card-icon">2</div>
+                    <h3 class="card-title">Better Together Circle</h3>
+                    <p class="card-text">A collective space to connect, heal, grow, and thrive. Share experiences or simply be a listening ear in our dedicated Men's and Women's indoor/outdoor circles.</p>
+                    <a href="#connect" class="card-link">Join the Waitlist &rarr;</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="offering-card fade-in-scroll">
+                    <div class="card-icon">3</div>
+                    <h3 class="card-title">Walk & Talk</h3>
+                    <p class="card-text">Enjoy nature while we converse. Become a presence in your neighborhood trails and parks. Look out for our virtual POP-UP sessions.</p>
+                    <a href="#connect" class="card-link">Explore Trails &rarr;</a>
+                </div>
+                <!-- Card 4 -->
+                <div class="offering-card fade-in-scroll">
+                    <div class="card-icon">4</div>
+                    <h3 class="card-title">Reiki Healing</h3>
+                    <p class="card-text">A holistic approach promoting life balance and healing by harnessing life energy. Bring equilibrium to your chakras with office or distance sessions.</p>
+                    <a href="#connect" class="card-link">Book Healing &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emerging Initiative: Your Voice, Our Ear -->
+    <section class="section voice-ear">
+        <div class="container text-center fade-in-scroll">
+            <h2 class="section-title">Your Voice, Our Ear</h2>
+            <p class="section-text mx-auto">Life can sometimes load us with thoughts that need an outlet. Whether it's a concern, an idea, or simply a reflection, we're here to listen. Stop, take a moment to unburden yourself.</p>
+        </div>
+    </section>
+
+    <!-- The Micro-Commitment: Footer / Minimal CTA -->
+    <footer class="footer" id="connect">
+        <div class="container footer-container fade-in-scroll">
+            <div class="footer-cta">
+                <h2 class="footer-title">Ready for a Guided Moment?</h2>
+                <p class="footer-text">Inquire about our sessions or join our exclusive mailing list for wellness insights.</p>
+                <form class="minimal-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Your Email Address" required class="form-input">
+                    <button type="submit" class="btn-submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Guided Moments</h4>
+                    <a href="tel:8602807593">860-280-7593</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Guided Moments - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
