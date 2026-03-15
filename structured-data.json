@@ -1,0 +1,160 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://guidedmoments.com/#business",
+      "name": "Guided Moments Consulting & Wellness Coaching LLC",
+      "alternateName": "Guided Moments",
+      "url": "https://guidedmoments.com",
+      "logo": "https://guidedmoments.com/assets/images/logo.png",
+      "image": "https://guidedmoments.com/assets/images/hero.png",
+      "description": "Guided Moments offers personalized life coaching, wellness circles, reiki healing, and walk & talk sessions in Connecticut. Certified Psychosynthesis Life Coach Zee M. Mitchell guides you toward purposeful living.",
+      "telephone": "+1-860-280-7593",
+      "email": "zeemitchellgm@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "CT",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "http://www.facebook.com/lifecoach63",
+        "http://instagram.com/guidedmomentslifecoach"
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "4",
+        "bestRating": "5",
+        "worstRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Tina S." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Zee is an insightful mentor, an engaging motivational speaker and provides a wealth of knowledge both spiritually and mentally. Her positive energy is incredibly motivating."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Michele L." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "I think you're absolutely amazing and you are gifted at helping people. My life has changed, the way I see myself. I'm better because of you."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Jack M." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Zee quickly put me at ease and before long I was sharing things about myself. She believes in you and assures you that you will see growth."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Mary M." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "There is something about her that puts you at ease and you want to tell her everything. She is honest and tells it like she sees it."
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://guidedmoments.com/#founder",
+      "name": "Zee M. Mitchell",
+      "jobTitle": "Certified Psychosynthesis Life Coach & Reiki Master",
+      "worksFor": { "@id": "https://guidedmoments.com/#business" },
+      "description": "An island girl at heart from Trinidad and Tobago, Zee has called Connecticut home for over thirty years. She is a certified Psychosynthesis Life Coach, Advanced Psychosynthesis Practitioner, and Reiki Master/Teacher.",
+      "image": "https://guidedmoments.com/assets/images/zee_mitchel.png",
+      "sameAs": [
+        "http://www.facebook.com/lifecoach63",
+        "http://instagram.com/guidedmomentslifecoach"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://guidedmoments.com/#website",
+      "url": "https://guidedmoments.com",
+      "name": "Guided Moments",
+      "publisher": { "@id": "https://guidedmoments.com/#business" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://guidedmoments.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is life coaching?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Life coaching is an interactive experience where you uncover roadblocks and barriers that get in the way of you taking the next step. Your life coach becomes a partner in your wellness journey to guide you in recentering yourself while discovering your purpose and passions to be the best version of yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is our conversation confidential?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100%! What happens in our sessions stays in our sessions, just like seeing a therapist. Your privacy and trust are paramount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many sessions will I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You hold the key to seeing results, which depends on the complexity of your discovery, barriers, goals and commitment, and openness to your growth and healing process. We typically recommend committing to 4-5 sessions to start and then deciding from there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are virtual sessions available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Zoom sessions are available for your convenience. We also offer flexible scheduling when availability allows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Reiki?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reiki is an energy healing technique considered a holistic approach to healing, using universal life energy to bring balance and harmony in the body, mind, and spirit. It helps reduce stress, promote relaxation and balance the body's chakras."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "1-on-1 Life Coaching",
+      "provider": { "@id": "https://guidedmoments.com/#business" },
+      "description": "Tailored sessions focused on empowering you to develop a positive mindset, build self-confidence, and improve overall well-being in a judgment-free space.",
+      "serviceType": "Life Coaching"
+    },
+    {
+      "@type": "Service",
+      "name": "Better Together Circle",
+      "provider": { "@id": "https://guidedmoments.com/#business" },
+      "description": "A collective space to connect, heal, grow, and thrive. Share experiences or simply be a listening ear in our dedicated Men's and Women's indoor/outdoor circles.",
+      "serviceType": "Group Wellness"
+    },
+    {
+      "@type": "Service",
+      "name": "Walk & Talk",
+      "provider": { "@id": "https://guidedmoments.com/#business" },
+      "description": "Enjoy nature while we converse. Become a presence in your neighborhood trails and parks.",
+      "serviceType": "Outdoor Coaching"
+    },
+    {
+      "@type": "Service",
+      "name": "Reiki Healing",
+      "provider": { "@id": "https://guidedmoments.com/#business" },
+      "description": "A holistic approach promoting life balance and healing by harnessing life energy. Bring equilibrium to your chakras with office or distance sessions.",
+      "serviceType": "Reiki Healing"
+    }
+  ]
+}
