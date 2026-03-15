@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=4">
     <!-- GSAP for smooth micro-animations -> Jony Ive aesthetic -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -23,9 +23,13 @@
                 <img src="assets/images/logo.png" alt="Guided Moments Logo" class="nav-logo-img">
                 <span class="nav-logo-text">Guided Moments</span>
             </a>
-            <div class="nav-links">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
                 <a href="#about" class="nav-link">Philosophy</a>
                 <a href="#offerings" class="nav-link">Offerings</a>
+                <a href="#insights" class="nav-link">Insights</a>
                 <a href="#connect" class="nav-link cta-outline">Connect</a>
             </div>
         </div>
@@ -37,22 +41,40 @@
         <div class="hero-content fade-in-up">
             <h1 class="hero-title">Purposeful living begins with a single, guided moment.</h1>
             <p class="hero-subtitle">Elevate your self-awareness, positive transformation, and personal growth.</p>
-            <a href="#offerings" class="btn-primary">Begin the Journey</a>
+            <a href="#offerings" class="btn-primary magnetic-btn">Begin the Journey</a>
         </div>
     </section>
+
+    <!-- Authority Strip (Daniel Priestley KPI) -->
+    <div class="authority-banner fade-in-scroll">
+        <div class="container authority-container">
+            <p class="authority-text text-center">Certified & Supported By</p>
+            <div class="authority-logos">
+                <span class="authority-logo">ICF Affiliated</span>
+                <span class="authority-logo">Holistic Wellness Association</span>
+                <span class="authority-logo">Reiki Alliance Practitioner</span>
+            </div>
+        </div>
+    </div>
 
     <!-- The Authority: Philosophy / About Section -->
     <section class="section philosophy" id="about">
         <div class="container philosophy-container">
             <div class="philosophy-text fade-in-scroll">
-                <span class="section-label">Our Philosophy</span>
-                <h2 class="section-title">A safe space for profound transformation.</h2>
-                <p class="section-text">Our mission is to provide personalized coaching and consulting services that support our clients to unlock their full potential, discover their passions, and design a life that aligns with their values.</p>
-                <p class="section-text">We strive to cultivate self-awareness and personal growth in every dimension of your wellness journey. It's time to design a life plan that propels you forward.</p>
+                <span class="section-label">Meet Your Guide</span>
+                <h2 class="section-title">Zee M. Mitchell</h2>
+                <p class="section-text">An island girl at heart from Trinidad and Tobago, Zee has called Connecticut home for over thirty years. Her journey through life coaching, business management, leadership, and mentorship led her to found Guided Moments — a practice rooted in empathy, expertise, and purpose.</p>
+                <div class="credentials-list">
+                    <span class="credential-tag">Certified Psychosynthesis Life Coach</span>
+                    <span class="credential-tag">Advanced Psychosynthesis Practitioner</span>
+                    <span class="credential-tag">Reiki Master / Teacher</span>
+                    <span class="credential-tag">Business Degrees — Indiana Tech & Bay Path University</span>
+                </div>
+                <p class="section-text" style="margin-top: var(--spacing-md);">Life coaching isn't just a passion; it's an innate calling. With the rich tapestry of her life events and training, Zee empowers others with unwavering support towards embracing action and achieving their desired outcomes.</p>
             </div>
             <div class="philosophy-image fade-in-scroll">
                 <div class="founder-image-wrapper">
-                    <img src="assets/images/zee_mitchel.png" alt="Zee Mitchel - Founder" class="founder-img">
+                    <img src="assets/images/zee_mitchel.png" alt="Zee M. Mitchell - Founder & Life Coach" class="founder-img">
                 </div>
             </div>
         </div>
@@ -73,7 +95,7 @@
                     <div class="card-icon">1</div>
                     <h3 class="card-title">1-on-1 Life Coaching</h3>
                     <p class="card-text">Tailored sessions focused on empowering you to develop a positive mindset, build self-confidence, and improve overall well-being in a judgment-free space.</p>
-                    <a href="#connect" class="card-link">Request a Session &rarr;</a>
+                    <a href="#connect" class="card-link">Apply for Coaching &rarr;</a>
                 </div>
                 <!-- Card 2 -->
                 <div class="offering-card fade-in-scroll">
@@ -87,15 +109,140 @@
                     <div class="card-icon">3</div>
                     <h3 class="card-title">Walk & Talk</h3>
                     <p class="card-text">Enjoy nature while we converse. Become a presence in your neighborhood trails and parks. Look out for our virtual POP-UP sessions.</p>
-                    <a href="#connect" class="card-link">Explore Trails &rarr;</a>
+                    <a href="#connect" class="card-link">View Schedule &rarr;</a>
                 </div>
                 <!-- Card 4 -->
                 <div class="offering-card fade-in-scroll">
                     <div class="card-icon">4</div>
                     <h3 class="card-title">Reiki Healing</h3>
                     <p class="card-text">A holistic approach promoting life balance and healing by harnessing life energy. Bring equilibrium to your chakras with office or distance sessions.</p>
-                    <a href="#connect" class="card-link">Book Healing &rarr;</a>
+                    <a href="#connect" class="card-link">Apply for Session &rarr;</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Transformations (Real Reviews) -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="text-center fade-in-scroll">
+                <span class="section-label">Transformations</span>
+                <h2 class="section-title">Don't just take our word for it.</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Zee is an insightful mentor, an engaging motivational speaker and provides a wealth of knowledge both spiritually and mentally. Her positive energy is incredibly motivating and she is passionate about helping others reach their goals. She has a wonderful way of connecting to you so that you feel very comfortable in sessions. Don't wait, schedule your session with Zee. You will be glad you did."</p>
+                    <p class="testimonial-author">— Tina S.</p>
+                </div>
+                <div class="testimonial-card fade-in-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I think you're absolutely amazing and you are gifted at helping people. My life has changed, the way I see myself, understanding why I had trouble, learning to heal me first. I'm better because of you."</p>
+                    <p class="testimonial-author">— Michele L.</p>
+                </div>
+                <div class="testimonial-card fade-in-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I wasn't sure what a life coach would do for me, but Zee quickly put me at ease and before long I was sharing things about myself. She believes in you and assures you that you will see growth. Zee's point was she believed in me. Thank you, Zee, for your care, guidance, and encouragement to give myself permission to stay on task."</p>
+                    <p class="testimonial-author">— Jack M.</p>
+                </div>
+                <div class="testimonial-card fade-in-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"There is something about her that puts you at ease and you want to tell her everything. She is honest and tells it like she sees it. Zee said it best when she told me, the shift comes from me when I come to realization. I love that!"</p>
+                    <p class="testimonial-author">— Mary M.</p>
+                </div>
+            </div>
+            <div class="text-center fade-in-scroll" style="margin-top: var(--spacing-lg);">
+                <a href="mailto:zeemitchellgm@gmail.com?subject=Free%20Consultation%20Request" class="btn-primary magnetic-btn">Book Your Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion (Friction Destroyer) -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="text-center fade-in-scroll">
+                <span class="section-label">Questions</span>
+                <h2 class="section-title">Frequently Asked</h2>
+            </div>
+            <div class="faq-container fade-in-scroll">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is life coaching?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Life coaching is an interactive experience where you uncover roadblocks and barriers that get in the way of you taking the next step. Your life coach becomes a partner in your wellness journey to guide you in recentering yourself while discovering your purpose and passions to be the best version of yourself.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is our conversation confidential?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>100%! What happens in our sessions stays in our sessions, just like seeing a therapist. Your privacy and trust are paramount.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How many sessions will I need?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You hold the key to seeing results, which depends on the complexity of your discovery, barriers, goals and commitment, and openness to your growth and healing process. We typically recommend committing to 4–5 sessions to start and then deciding from there.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Are virtual sessions available?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Zoom sessions are available for your convenience. We also offer flexible scheduling when availability allows.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is Reiki?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Reiki is an energy healing technique considered a holistic approach to healing, using universal life energy to bring balance and harmony in the body, mind, and spirit. It helps reduce stress, promote relaxation and balance the body's chakras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights / Blog (Key Person of Influence) -->
+    <section class="section insights" id="insights">
+        <div class="container">
+            <div class="text-center fade-in-scroll">
+                <span class="section-label">Insights</span>
+                <h2 class="section-title">Thoughts on Purpose.</h2>
+            </div>
+            <div class="insights-grid">
+                <a href="#" class="insight-card fade-in-scroll">
+                    <div class="insight-image placeholder-grad-1"></div>
+                    <div class="insight-content">
+                        <span class="insight-meta">Wellness • 3 min read</span>
+                        <h3 class="insight-title">The Power of Mindful Walking</h3>
+                    </div>
+                </a>
+                <a href="#" class="insight-card fade-in-scroll">
+                    <div class="insight-image placeholder-grad-2"></div>
+                    <div class="insight-content">
+                        <span class="insight-meta">Mindset • 5 min read</span>
+                        <h3 class="insight-title">Reframing Your Inner Critic</h3>
+                    </div>
+                </a>
+                <a href="#" class="insight-card fade-in-scroll">
+                    <div class="insight-image placeholder-grad-3"></div>
+                    <div class="insight-content">
+                        <span class="insight-meta">Balance • 4 min read</span>
+                        <h3 class="insight-title">Setting Boundaries Without Guilt</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -112,18 +259,29 @@
     <footer class="footer" id="connect">
         <div class="container footer-container fade-in-scroll">
             <div class="footer-cta">
-                <h2 class="footer-title">Ready for a Guided Moment?</h2>
-                <p class="footer-text">Inquire about our sessions or join our exclusive mailing list for wellness insights.</p>
+                <h2 class="footer-title">Start with Clarity.</h2>
+                <p class="footer-text">Enter your email to download the highly requested <strong style="color:var(--color-gold);">"Purposeful Living Blueprint."</strong> A low-friction step towards transformation.</p>
                 <form class="minimal-form" onsubmit="event.preventDefault();">
                     <input type="email" placeholder="Your Email Address" required class="form-input">
-                    <button type="submit" class="btn-submit">Submit</button>
+                    <button type="submit" class="btn-submit">Download</button>
                 </form>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
-                    <h4>Guided Moments</h4>
+                    <h4>Contact</h4>
                     <a href="tel:8602807593">860-280-7593</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="mailto:zeemitchellgm@gmail.com">zeemitchellgm@gmail.com</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <div class="social-links">
+                        <a href="http://www.facebook.com/lifecoach63" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="http://instagram.com/guidedmomentslifecoach" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
