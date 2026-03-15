@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Insights on wellness, mindset, and purposeful living from Guided Moments life coach Zee M. Mitchell.">
+    <title>Insights | Guided Moments Blog</title>
+    <link rel="canonical" href="https://guidedmoments.com/blog/">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Insights | Guided Moments Blog">
+    <meta property="og:description" content="Thoughts on wellness, mindset, and purposeful living from certified life coach Zee M. Mitchell.">
+    <meta property="og:image" content="https://guidedmoments.com/assets/images/hero.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css?v=5">
+    <link rel="stylesheet" href="../css/blog.css?v=1">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Guided Moments Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Guided Moments</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html#about" class="nav-link">Philosophy</a>
+                <a href="../index.html#offerings" class="nav-link">Offerings</a>
+                <a href="../index.html#insights" class="nav-link">Insights</a>
+                <a href="../index.html#connect" class="nav-link cta-outline">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="container">
+            <span class="section-label">Insights</span>
+            <h1 class="section-title">Thoughts on Purpose.</h1>
+            <p class="section-text mx-auto">Reflections on wellness, mindset, and the art of intentional living — from the practice of Guided Moments.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <a href="mindful-walking.html" class="blog-card">
+                    <img src="../assets/images/blog-mindful-walking.png" alt="A person walking on a peaceful nature trail" class="blog-card-image">
+                    <div class="blog-card-body">
+                        <span class="blog-card-meta">Wellness • 3 min read</span>
+                        <h2 class="blog-card-title">The Power of Mindful Walking</h2>
+                        <p class="blog-card-excerpt">How slowing down your stride can accelerate your inner clarity — and why it's one of the simplest tools for self-discovery.</p>
+                        <span class="blog-card-read">Read more →</span>
+                    </div>
+                </a>
+
+                <a href="inner-critic.html" class="blog-card">
+                    <img src="../assets/images/blog-inner-critic.png" alt="Person meditating in golden light" class="blog-card-image">
+                    <div class="blog-card-body">
+                        <span class="blog-card-meta">Mindset • 5 min read</span>
+                        <h2 class="blog-card-title">Reframing Your Inner Critic</h2>
+                        <p class="blog-card-excerpt">That voice in your head isn't your enemy. Learn how to reframe self-doubt into a compass for growth and self-compassion.</p>
+                        <span class="blog-card-read">Read more →</span>
+                    </div>
+                </a>
+
+                <a href="boundaries.html" class="blog-card">
+                    <img src="../assets/images/blog-boundaries.png" alt="Person standing peacefully by a window" class="blog-card-image">
+                    <div class="blog-card-body">
+                        <span class="blog-card-meta">Balance • 4 min read</span>
+                        <h2 class="blog-card-title">Setting Boundaries Without Guilt</h2>
+                        <p class="blog-card-excerpt">Boundaries aren't walls — they're bridges to healthier relationships. Here's how to set them with confidence and grace.</p>
+                        <span class="blog-card-read">Read more →</span>
+                    </div>
+                </a>
+
+                <!-- TO ADD NEW BLOG POSTS: Copy the <a> block above, change the href, image, title, excerpt, and meta. -->
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Guided Moments - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('nav-links');
+        if (btn) btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
